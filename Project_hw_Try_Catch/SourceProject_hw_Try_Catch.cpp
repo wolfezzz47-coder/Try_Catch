@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdexcept>
 #include <string>
+#include <Windows.h>
 
 using namespace std;
 
@@ -114,7 +115,12 @@ public:
     }
 };
 
-int main() {
+int main() 
+{
+    SetConsoleCP(65001);
+    SetConsoleOutputCP(65001);
+
+    cout << "======= Try Catch(робота з виключеннями) =======\n";
     DoublyLinkedList list;
 
     try {
